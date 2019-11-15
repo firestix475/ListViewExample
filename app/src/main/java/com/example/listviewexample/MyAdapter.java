@@ -29,6 +29,6 @@ public class MyAdapter extends ArrayAdapter<Player> {
         //Todo get single player using position and listOfPlayers
         // get references to views in single_item.xml , for example
         //        TextView name = single_item_view.findViewById(R.id.name);
-        return  single_item_view;
+        return single_item_view;
     }
 }

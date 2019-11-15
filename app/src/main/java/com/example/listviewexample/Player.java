@@ -2,23 +2,23 @@ package com.example.listviewexample;
 
 public class Player {
     //Todo finish the class player
-        // Todo 5 member variables
+        //Todo 5 member variables
         //Todo name, age, worth(money), main sport and int image resource from drawable
         //Todo create constructor and getters and setters
         // use Android Studio for fast writing code, find Code->Generate
     
     private String name;
     private int age;
+    private int worth;
+    private String mainSport;
     private int imageResource;
-    private int height;
-    private int annualIncome;
 
-    public Player(String name, int age, int imageResource, int height, int annualIncome) {
+    public Player(String name, int age, int worth, String mainSport, int imageResource) {
         this.name = name;
         this.age = age;
+        this.worth = worth;
+        this.mainSport = mainSport;
         this.imageResource = imageResource;
-        this.height = height;
-        this.annualIncome = annualIncome;
     }
 
     public void setName(String name) {
@@ -29,16 +29,16 @@ public class Player {
         this.age = age;
     }
 
+    public void setWorth(int worth) {
+        this.worth = worth;
+    }
+
+    public void setMainSport (String mainSport) {
+        this.mainSport = mainSport;
+    }
+
     public void setImageResource(int imageResource) {
         this.imageResource = imageResource;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public void setAnnualIncome(int annualIncome) {
-        this.annualIncome = annualIncome;
     }
 
     public String getName() {
@@ -49,15 +49,16 @@ public class Player {
         return age;
     }
 
+    public int getWorth() {
+        return worth;
+    }
+
+    public String getMainSport() {
+        return mainSport;
+    }
+
     public int getImageResource() {
         return imageResource;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public int getAnnualIncome() {
-        return annualIncome;
-    }
 }
