@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
     //Todo reference listview
 
+        ListView listView = findViewById(R.id.list);
+
 
 
     //Todo ListView listView = findViewById();
