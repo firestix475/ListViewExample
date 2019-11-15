@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     //Todo reference listview
+
+
+
     //Todo ListView listView = findViewById();
     //Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         //Todo  add custom adapter to listview
