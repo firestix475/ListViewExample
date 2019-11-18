@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp">
 <!-- Todo create ImageView and 4 textviews -->
 
     <ImageView
         android:layout_weight="1"
         android:layout_width="0dp"
-        android:layout_height="220dp"
+        android:layout_height="200dp"
         android:id="@+id/picture"
         android:src="@drawable/ic_launcher_background"/>
-    
+
     <LinearLayout
         android:paddingTop="24dp"
         android:layout_width="0dp"
@@ -23,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name"
-            android:textSize="32dp"
+            android:textSize="22dp"
             android:textAlignment="center"/>
 
         <TextView
@@ -31,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Age"
-            android:textSize="32dp"
+            android:textSize="22dp"
             android:textAlignment="center"/>
 
         <TextView
@@ -39,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Worth"
-            android:textSize="32dp"
+            android:textSize="22dp"
             android:textAlignment="center"/>
 
         <TextView
@@ -47,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Main Sport"
-            android:textSize="32dp"
+            android:textSize="22dp"
             android:textAlignment="center"/>
 
     </LinearLayout>

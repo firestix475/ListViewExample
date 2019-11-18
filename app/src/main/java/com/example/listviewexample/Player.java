@@ -12,13 +12,15 @@ public class Player {
     private int worth;
     private String mainSport;
     private int imageResource;
+    private String webpage;
 
-    public Player(String name, int age, int worth, String mainSport, int imageResource) {
+    public Player(String name, int age, int worth, String mainSport, int imageResource, String webpage) {
         this.name = name;
         this.age = age;
         this.worth = worth;
         this.mainSport = mainSport;
         this.imageResource = imageResource;
+        this.webpage = webpage;
     }
 
     public void setName(String name) {
@@ -41,6 +43,10 @@ public class Player {
         this.imageResource = imageResource;
     }
 
+    public void setWebpage(String webpage) {
+        this.webpage = webpage;
+    }
+
     public String getName() {
         return name;
     }
@@ -59,6 +65,10 @@ public class Player {
 
     public int getImageResource() {
         return imageResource;
+    }
+
+    public String getWebpage() {
+        return webpage;
     }
 
 }
