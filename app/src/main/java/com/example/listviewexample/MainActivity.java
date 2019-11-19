@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  {
 
-    public ArrayList<Player> list;
+    public ArrayList<Player> list = new ArrayList<Player>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity  {
     //Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
         //Todo add custom adapter to listview
         //Todo listView.setAdapter(------);
-
-        ArrayAdapter<Player> MyAdapter = new ArrayAdapter<>(this, R.layout.activity_main, list);
-        listView.setAdapter(MyAdapter);
+        getPlayers();
+        MyAdapter myAdapter = new MyAdapter(this, 0, list);
+        listView.setAdapter(myAdapter);
     }
 
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity  {
         String[] url = new String[]{"https://www.biography.com/athlete/tristan-thompson","https://www.biography.com/athlete/james-harden","https://www.biography.com/athlete/kyrie-irving","https://www.biography.com/athlete/stephen-curry","https://www.biography.com/athlete/russell-westbrook",
                 "https://www.biography.com/athlete/derrick-rose","https://www.biography.com/athlete/kevin-durant","https://www.biography.com/athlete/dwyane-wade","https://www.biography.com/athlete/kobe-bryant","https://www.biography.com/athlete/lebron-james",
                 "https://www.biography.com/athlete/magic-johnson","https://www.biography.com/athlete/miro-jurisic","https://www.biography.com/athlete/kareem-abdul-jabbar","https://www.biography.com/athlete/shaquille-oneal","https://www.biography.com/athlete/chris-paul"};
-        for(int x = 0; x < 15 ; x++ ){
+        for(int x = 0; x < 15 ; x++){
             list.add(new Player(name[x], age[x], worth[x], "Basketball", imageResource[x], url[x]));
         }
     }
