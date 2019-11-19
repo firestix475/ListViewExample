@@ -39,9 +39,10 @@ public class MainActivity extends AppCompatActivity  {
         int[] worth = new int[] {};
         String[] MainSport = new String[] {};
         int[] imageResource = new int[] {};
+        String[] webpage = new String[] {};
 
         for (int i=0; i<15; i++) {
-            list.add(new Player(name[i], age[i], worth[i], MainSport[i], imageResource[i]));
+            list.add(new Player(name[i], age[i], worth[i], MainSport[i], imageResource[i], webpage[i]));
         }
 
     }

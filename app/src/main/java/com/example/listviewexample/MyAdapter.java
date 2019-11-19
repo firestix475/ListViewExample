@@ -1,6 +1,8 @@
 package com.example.listviewexample;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +24,7 @@ public class MyAdapter extends ArrayAdapter<Player> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View single_item_view = convertView;
         //Using this inflated view, we can get the access to the various UI widgets present in the row item XML file.
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -43,7 +45,8 @@ public class MyAdapter extends ArrayAdapter<Player> {
             single_item_view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(listOfPlayers.get(position).getWebpage()));
+                    view.getContext().startActivity(browserIntent);
                 }
             });
 
