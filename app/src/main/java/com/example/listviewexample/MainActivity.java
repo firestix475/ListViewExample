@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity  {
                 "https://www.biography.com/athlete/derrick-rose","https://www.biography.com/athlete/kevin-durant","https://www.biography.com/athlete/dwyane-wade","https://www.biography.com/athlete/kobe-bryant","https://www.biography.com/athlete/lebron-james",
                 "https://www.biography.com/athlete/magic-johnson","https://www.biography.com/athlete/miro-jurisic","https://www.biography.com/athlete/kareem-abdul-jabbar","https://www.biography.com/athlete/shaquille-oneal","https://www.biography.com/athlete/chris-paul"};
         for(int x = 0; x < 15 ; x++ ){
-            list.add(new Player(name[x], age[x], worth[x], "Basketball", imageResource[x], url[i]));
+            list.add(new Player(name[x], age[x], worth[x], "Basketball", imageResource[x], url[x]));
         }
     }
 }
