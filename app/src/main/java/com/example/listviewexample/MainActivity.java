@@ -10,13 +10,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  {
 
     public ArrayList<Player> list = new ArrayList<Player>();
-
+    int c = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,22 @@ public class MainActivity extends AppCompatActivity  {
         MyAdapter myAdapter = new MyAdapter(this, 0, list);
         gridView.setAdapter(myAdapter);
     }
-
+    public void chanco (View v){
+        if (c==0){
+            GridView gridView1 = findViewById(R.id.gridView);
+            gridView1.setNumColumns(3);
+            TextView textView = findViewById(R.id.textView);
+            textView.setText("change to 2 column");
+            c = 1;
+        }
+        else {
+            GridView gridView1 = findViewById(R.id.gridView);
+            gridView1.setNumColumns(2);
+            TextView textView = findViewById(R.id.textView);
+            textView.setText("change to 3 column");
+            c = 0;
+        }
+    }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
 

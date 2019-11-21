@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- TODO insert ListView that take up the whole available space, it will be root view-->
-<GridView android:id="@+id/gridView"
-    android:numColumns="3"
-    android:gravity="center"
-    android:columnWidth="50dp"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- TODO insert ListView that take up the whole available space, it will be root view-->
+<LinearLayout android:id="@+id/e"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".MainActivity">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="change to 3 column"
+        android:onClick="chanco"
+        android:id="@+id/textView"/>
+    <GridView android:id="@+id/gridView"
+        android:numColumns="2"
+        android:gravity="center"
+        android:columnWidth="50dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
-</GridView>
+    </GridView>
+</LinearLayout>
