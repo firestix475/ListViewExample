@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
     //Todo reference listview
-        ListView listView = findViewById(R.id.listView);
+        GridView gridView = findViewById(R.id.gridView);
 
     //Todo ListView listView = findViewById();
     //Todo initialize custom adapter(MyAdapter) - using  method getPlayers, pay attention to constructor of MyAdapter
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity  {
         //Todo listView.setAdapter(------);
         getPlayers();
         MyAdapter myAdapter = new MyAdapter(this, 0, list);
-        listView.setAdapter(myAdapter);
+        gridView.setAdapter(myAdapter);
     }
 
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
