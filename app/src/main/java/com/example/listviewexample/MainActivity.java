@@ -1,13 +1,18 @@
 package com.example.listviewexample;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -34,21 +39,28 @@ public class MainActivity extends AppCompatActivity  {
         MyAdapter myAdapter = new MyAdapter(this, 0, list);
         gridView.setAdapter(myAdapter);
     }
-    public void chanco (View v){
-        if (c==0){
-            GridView gridView1 = findViewById(R.id.gridView);
-            gridView1.setNumColumns(3);
-            TextView textView = findViewById(R.id.textView);
-            textView.setText("change to 2 column");
-            c = 1;
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menufi,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.two:
+                GridView g1 = findViewById(R.id.gridView);
+                g1.setNumColumns(2);
+                return true;
+            case R.id.three:
+                GridView g2 = findViewById(R.id.gridView);
+                g2.setNumColumns(3);
+                return true;
         }
-        else {
-            GridView gridView1 = findViewById(R.id.gridView);
-            gridView1.setNumColumns(2);
-            TextView textView = findViewById(R.id.textView);
-            textView.setText("change to 3 column");
-            c = 0;
-        }
+
+        return super.onOptionsItemSelected(item);
     }
     //Todo  create a method getPlayers() that will create an array of 15 players and return the list of type List<Player>
     // choose successful sportsmen from different sports, make sure to fill Player class before starting
